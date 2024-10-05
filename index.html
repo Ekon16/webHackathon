@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compack - Actividades personalizadas para tu viaje</title>
+    <meta name="description" content="Descubre actividades personalizadas para tu viaje con Compack. Basadas en tus gustos y personalidad, con reserva rápida y fácil.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Compack</div>
+            <ul>
+                <li><a href="#como-funciona">Cómo funciona</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main><!--  -->
+        <section id="hero">
+            <h1 id="slogan">Descubre tu aventura perfecta con Compack</h1>
+            <p id="subslogan">Actividades personalizadas para tu viaje, basadas en tus gustos y personalidad. Reserva fácil y rápidamente.</p>
+            <button id="start-btn" class="cta-button">Empezar ahora</button>
+        </section>
+
+        <section id="como-funciona">
+            <h2>Cómo funciona</h2>
+            <div class="steps">
+                <div class="step">
+                    <img src="icons8-persona-de-sexo-masculino-30.png" alt="Icono de personalización">
+                    <h3>Personaliza</h3>
+                    <p>Completa un breve formulario sobre tus intereses y preferencias.</p>
+                </div>
+                <div class="step">
+                    <img src="icons8-búsqueda.svg" alt="Icono de descubrimiento">
+                    <h3>Descubre</h3>
+                    <p>Recibe recomendaciones de actividades adaptadas a ti.</p>
+                </div>
+                <div class="step">
+                    <img src="icons8-calendario-24.png" alt="Icono de reserva">
+                    <h3>Reserva</h3>
+                    <p>Haz tus reservas fácilmente con un solo clic.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios">
+            <h2>Beneficios</h2>
+            <div class="benefits">
+                <div class="benefit">   
+                    <img src="icons8-casilla-de-verificación-2.svg" alt="Icono de actividades personalizadas">
+                    <h3>Actividades personalizadas</h3>
+                    <p>Descubre experiencias únicas que se ajustan a tus intereses y estilo de viaje.</p>
+                </div>
+                <div class="benefit">
+                    <img src="icons8-tiempo-50.png" alt="Icono de ahorro de tiempo">
+                    <h3>Ahorra tiempo</h3>
+                    <p>Olvídate de la planificación tediosa. Nosotros hacemos el trabajo por ti.</p>
+                </div>
+                <div class="benefit">
+                    <img src="icons8-bolsa-de-dinero-de-euros-30.png" alt="Icono de mejores precios">
+                    <h3>Mejores precios</h3>
+                    <p>Accede a descuentos exclusivos en actividades y experiencias.</p>
+                </div>
+                <div class="benefit">
+                    <img src="icons8-sonriente-50.png" alt="Icono de satisfacción garantizada">
+                    <h3>Satisfacción garantizada</h3>
+                    <p>Disfruta de experiencias cuidadosamente seleccionadas para ti.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="personalizacion" class="hidden">
+            <h2>Personaliza tu experiencia</h2>
+            <form id="personalization-form">
+                <div class="form-group">
+                    <label>Intereses</label>
+                    <div class="interests-grid">
+                        <button type="button" class="interest-btn" data-interest="Cultura">Cultura</button>
+                        <button type="button" class="interest-btn" data-interest="Naturaleza">Naturaleza</button>
+                        <button type="button" class="interest-btn" data-interest="Gastronomía">Gastronomía</button>
+                        <button type="button" class="interest-btn" data-interest="Aventura">Aventura</button>
+                        <button type="button" class="interest-btn" data-interest="Relax">Relax</button>
+                        <button type="button" class="interest-btn" data-interest="Compras">Compras</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="schedule">Preferencia de horarios</label>
+                    <select id="schedule" name="schedule" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="morning">Mañana</option>
+                        <option value="afternoon">Tarde</option>
+                        <option value="evening">Noche</option>
+                        <option value="flexible">Flexible</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Presupuesto (€)</label>
+                    <input type="range" id="budget" name="budget" min="100" max="1000" step="50" value="500">
+                    <output for="budget">500</output>
+                </div>
+                <button type="submit" class="cta-button">Obtener recomendaciones</button>
+            </form>
+        </section>
+
+        <section id="recomendaciones" class="hidden">
+            <h2>Actividades recomendadas para ti</h2>
+            <div id="recommendations-container" class="recommendations-grid"></div>
+        </section>
+    </main>
+
+
+
+    <footer id="contacto">
+        <p>&copy; 2024 Compack. Todos los derechos reservados.</p>
+        <nav>
+            <a href="#">Términos de uso</a>
+            <a href="#">Política de privacidad</a>
+            <a href="mailto:info@compack.com">Contacto</a>
+        </nav>
+    </footer>
+
+    <div id="chatbot-widget" class="chatbot-widget">
+        <div id="chatbot-header" class="chatbot-header">
+            <h3>Asistente Compack</h3>
+            <button id="chatbot-toggle">×</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <form id="chatbot-form" class="chatbot-form">
+            <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje..." required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
