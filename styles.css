@@ -5,28 +5,27 @@
     --background-color: #f4f4f4;
 }
 
-
-#slogan{
-    font-size: 100px;
-    width: 50%; /* O el tamaño que prefieras */
-    margin: 0 auto;
-    text-align: center;
-
-}
-
-h2{
-    font-size: 70px;
-    width: 50%; /* O el tamaño que prefieras */
+#slogan {
+    font-size: 10vw; /* Escala con el ancho de la ventana */
+    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
 
-#subslogan{
-    font-size: 50px;
-    width: 50%; /* O el tamaño que prefieras */
+h2 {
+    font-size: 7vw;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
+
+#subslogan {
+    font-size: 5vw;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -142,14 +141,14 @@ h1, h2, h3 {
     margin-bottom: 1.5rem;
 }
 
-.hero{
+.hero {
     display: flex;
-    justify-content: center;  /* Centra horizontalmente */
-    align-items: center;      /* Centra verticalmente */
-    height: 100vh;  
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-#start-btn{
+#start-btn {
     display: block;
     margin: 0 auto;
 }
@@ -246,15 +245,6 @@ footer nav a {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
-
-    .steps, .benefits {
-        grid-template-columns: 1fr;
-    }
-}
 .chatbot-widget {
     position: fixed;
     bottom: 20px;
@@ -344,4 +334,37 @@ footer nav a {
 
 .chatbot-form button:hover {
     background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .steps, .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    #slogan, h2, #subslogan {
+        font-size: 8vw;
+        width: 100%;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    #slogan, h2, #subslogan {
+        font-size: 12vw;
+    }
+
+    .steps, .benefits {
+        grid-template-columns: 1fr;
+    }
 }
